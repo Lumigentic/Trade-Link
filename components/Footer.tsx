@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--blue-gradient-end)] text-white">
+    <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -21,9 +21,9 @@ export default function Footer() {
                 height={40}
                 className="w-auto h-10"
               />
-              <span className="font-heading font-bold text-xl">Trade Link</span>
+              <span className="font-heading font-bold text-xl text-[var(--primary-teal)]">Trade Link</span>
             </Link>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4">
               Your trusted partner in global trade and logistics, delivering precision, care and reliability.
             </p>
             <div className="flex space-x-4">
@@ -31,7 +31,7 @@ export default function Footer() {
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -40,7 +40,7 @@ export default function Footer() {
                 href={siteConfig.links.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
@@ -50,25 +50,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-heading font-semibold text-lg mb-4 text-gray-900">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/about" className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/services" className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/blog" className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/contact" className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm">
                   Contact
                 </Link>
               </li>
@@ -77,37 +77,37 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Our Services</h3>
+            <h3 className="font-heading font-semibold text-lg mb-4 text-gray-900">Our Services</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300 text-sm">Client Acquisition</li>
-              <li className="text-gray-300 text-sm">Door-to-Door Transport</li>
-              <li className="text-gray-300 text-sm">Import Customs Clearance</li>
-              <li className="text-gray-300 text-sm">Export Customs Clearance</li>
+              <li className="text-gray-600 text-sm">Client Acquisition</li>
+              <li className="text-gray-600 text-sm">Door-to-Door Transport</li>
+              <li className="text-gray-600 text-sm">Import Customs Clearance</li>
+              <li className="text-gray-600 text-sm">Export Customs Clearance</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-heading font-semibold text-lg mb-4 text-gray-900">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-2">
-                <MapPin size={18} className="mt-1 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">{siteConfig.contact.address}</span>
+                <MapPin size={18} className="mt-1 flex-shrink-0 text-[var(--primary-teal)]" />
+                <span className="text-gray-600 text-sm">{siteConfig.contact.address}</span>
               </li>
               <li className="flex items-center space-x-2">
-                <Phone size={18} className="flex-shrink-0" />
+                <Phone size={18} className="flex-shrink-0 text-[var(--primary-teal)]" />
                 <a
                   href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                  className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm"
                 >
                   {siteConfig.contact.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-2">
-                <Mail size={18} className="flex-shrink-0" />
+                <Mail size={18} className="flex-shrink-0 text-[var(--primary-teal)]" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                  className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -117,19 +117,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-blue-700">
+        <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-300 text-sm">
+            <div className="text-gray-600 text-sm">
               © {currentYear} Trade Link Customs & Logistics Ltd. All rights reserved.
             </div>
             <div className="flex items-center space-x-6">
               <Link
                 href="/privacy"
-                className="text-gray-300 hover:text-white transition-colors text-sm"
+                className="text-gray-600 hover:text-[var(--primary-teal)] transition-colors text-sm"
               >
                 Privacy Policy
               </Link>
-              <span className="text-gray-300 text-sm">
+              <span className="text-gray-600 text-sm">
                 Powered by{' '}
                 <a
                   href="https://lumigentic.com"
@@ -142,7 +142,7 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          <div className="mt-4 text-center text-gray-400 text-xs">
+          <div className="mt-4 text-center text-gray-500 text-xs">
             Certified by BIFA | Member of Chartered Institute of Export & International Trade | Member of FSB
           </div>
         </div>
