@@ -260,43 +260,58 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="text-[var(--accent-orange)] text-5xl mb-4">"</div>
-                <p className="text-gray-700 text-lg mb-6 italic">
-                  {testimonial.quote}
-                </p>
+            {testimonials.map((testimonial, index) => {
+              const gradients = [
+                'from-[var(--primary-teal)] to-[var(--blue-gradient-end)]',
+                'from-[var(--accent-orange)] to-[var(--accent-orange-dark)]',
+                'from-[var(--blue-gradient-start)] to-[var(--primary-teal)]',
+              ];
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  {/* Gradient Background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-5`}></div>
 
-                {/* Metrics */}
-                <div className="border-t border-gray-200 pt-4 mb-6">
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    {Object.entries(testimonial.metrics).map(([key, value], idx) => (
-                      <div key={idx} className="text-center">
-                        <p className="text-2xl font-bold text-[var(--primary-teal)]">{value}</p>
-                        <p className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                  <div className="relative bg-white p-8">
+                    {/* Quote Icon */}
+                    <div className={`inline-block p-3 rounded-lg bg-gradient-to-br ${gradients[index]} mb-4`}>
+                      <div className="text-white text-3xl font-bold leading-none">"</div>
+                    </div>
+
+                    <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                      {testimonial.quote}
+                    </p>
+
+                    {/* Metrics with Cards */}
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      {Object.entries(testimonial.metrics).map(([key, value], idx) => (
+                        <div key={idx} className={`bg-gradient-to-br ${gradients[index]} p-4 rounded-xl text-center`}>
+                          <p className="text-2xl font-bold text-white mb-1">{value}</p>
+                          <p className="text-xs text-white/90 capitalize font-medium">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Author Info */}
+                    <div className="flex items-center pt-4 border-t border-gray-100">
+                      <div className={`w-14 h-14 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md`}>
+                        {testimonial.author.charAt(0)}
                       </div>
-                    ))}
+                      <div className="ml-4">
+                        <p className="font-bold text-gray-900">{testimonial.author}</p>
+                        <p className="text-sm text-gray-600">{testimonial.company}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.author.charAt(0)}
-                  </div>
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600">{testimonial.company}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
