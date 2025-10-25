@@ -53,7 +53,11 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-medium transition-colors text-[#2A8A8B] hover:text-[#2A8A8B]"
+                className={`font-medium transition-colors ${
+                  isScrolled
+                    ? 'text-[#2A8A8B] hover:text-[var(--primary-teal-dark)]'
+                    : 'text-white hover:text-gray-200'
+                }`}
               >
                 {link.label}
               </Link>
