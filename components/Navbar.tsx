@@ -60,9 +60,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-medium transition-colors hover:text-[var(--accent-orange)] ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className="font-medium transition-colors text-[#2A8A8B] hover:text-[#2A8A8B]"
               >
                 {link.label}
               </Link>
@@ -103,7 +101,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                  className="block px-4 py-2 text-[#2A8A8B] hover:bg-gray-100 rounded-lg transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
