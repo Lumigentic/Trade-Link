@@ -180,7 +180,7 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Why Choose <span className="text-[var(--primary-teal)]">Trade Link</span>?
+                Why Choose Trade Link?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 At Trade Link, we combine decades of experience in international logistics, freight and customs to provide end-to-end trade solutions. Based in Hull (UK), we support businesses of all sizes in navigating the complexities of cross-border shipping and customs.
