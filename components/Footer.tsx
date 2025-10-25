@@ -21,7 +21,10 @@ export default function Footer() {
                 height={40}
                 className="w-auto h-10"
               />
-              <span className="font-heading font-bold text-xl text-white">Trade Link</span>
+              <span className="font-heading font-bold text-xl">
+                <span className="text-[#2A8A8B]">Trade </span>
+                <span className="text-[#F3A634]">Link</span>
+              </span>
             </Link>
             <p className="text-gray-100 text-sm mb-4">
               Your trusted partner in global trade and logistics, delivering precision, care and reliability.
