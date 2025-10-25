@@ -36,16 +36,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
             <Image
               src="/logo.png"
               alt="Trade Link Logo"
               width={100}
               height={100}
-              className="w-auto h-20"
+              className="w-auto h-12 sm:h-16 md:h-20"
               priority
             />
-            <span className="font-heading font-bold text-3xl">
+            <span className="font-heading font-bold text-xl sm:text-2xl md:text-3xl">
               <span className="text-[#2A8A8B]">Trade </span>
               <span className="text-[#F3A634]">Link</span>
             </span>

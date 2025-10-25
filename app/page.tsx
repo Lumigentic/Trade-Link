@@ -93,11 +93,11 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--blue-gradient-start)] via-[var(--primary-teal)] to-[var(--blue-gradient-end)] text-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <motion.div {...fadeInUp}>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Your Trusted Partner in<br />
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
+              Your Trusted Partner in<br className="hidden sm:block" />
               <span className="text-[var(--accent-orange)]">Global Trade & Logistics</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto px-4">
               Whether you're expanding into overseas markets, streamlining transport operations or ensuring seamless customs clearance, we deliver precision, care and reliability every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
