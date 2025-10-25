@@ -6,11 +6,25 @@ A modern, professional website for Trade Link Customs & Logistics Ltd, built wit
 
 This is a full-stack, responsive website featuring:
 - Modern design inspired by Avast.io
-- Brand colors: Teal (#2B8A99) and Orange (#E6A636)
+- Brand colors: Teal (#2A8A8B) and Orange (#F3A634)
 - Smooth animations with Framer Motion
 - SEO optimized
 - Contact form with API endpoint
 - Blog-ready with MDX support
+
+## 🎨 Brand Colors
+
+The two main colours from the Trade Link logo:
+
+**Teal-Blue (left shape):**
+- HEX: `#2A8A8B`
+- RGB: `(42, 138, 139)`
+- CMYK: `(70%, 0%, 0%, 45%)`
+
+**Warm Orange (right shape):**
+- HEX: `#F3A634`
+- RGB: `(243, 166, 52)`
+- CMYK: `(0%, 32%, 79%, 5%)`
 
 ## 🛠️ Tech Stack
 
