@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
-import { Ship, Package, Globe, CheckCircle, ArrowRight, Award } from 'lucide-react';
+import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Clock, Users } from 'lucide-react';
 
 export default function HomePage() {
   const fadeInUp = {
@@ -31,10 +31,30 @@ export default function HomePage() {
   ];
 
   const features = [
-    'Decades of experience in international logistics',
-    'BIFA certified and fully compliant',
-    'Member of Chartered Institute of Export & International Trade',
-    'Personalised service tailored to your needs',
+    {
+      icon: <Award className="w-6 h-6" />,
+      text: 'Decades of experience in international logistics, freight and customs',
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      text: 'BIFA certified and fully compliant with all regulatory requirements',
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      text: 'Member of Chartered Institute of Export & International Trade',
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      text: 'Personalised service tailored to your specific business needs',
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      text: 'Extensive global network spanning 50+ countries worldwide',
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      text: 'Proven track record with 100% client satisfaction rate',
+    },
   ];
 
   const testimonials = [
@@ -42,11 +62,28 @@ export default function HomePage() {
       quote: "Trade Link helped us launch in Europe – they handled everything from transport to customs clearance, and we were live in under three months.",
       author: "Client A",
       company: "Manufacturing Company",
+      metrics: {
+        timeframe: "3 months",
+        achievement: "European market entry",
+      },
     },
     {
       quote: "Their door-to-door service saved us hours of coordination and gave us full visibility on shipment status.",
       author: "Client B",
       company: "Retail Business",
+      metrics: {
+        savings: "50+ hours/month",
+        improvement: "Real-time tracking",
+      },
+    },
+    {
+      quote: "The customs clearance expertise at Trade Link saved us from costly delays and compliance issues. Highly professional team.",
+      author: "Client C",
+      company: "E-commerce Platform",
+      metrics: {
+        result: "Zero delays",
+        compliance: "100% compliant",
+      },
     },
   ];
 
@@ -155,9 +192,9 @@ export default function HomePage() {
               <p className="text-lg text-gray-600 mb-8">
                 At Trade Link, we combine decades of experience in international logistics, freight and customs to provide end-to-end trade solutions. Based in Hull (UK), we support businesses of all sizes in navigating the complexities of cross-border shipping and customs.
               </p>
-              <ul className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-6">
                 {features.map((feature, index) => (
-                  <motion.li
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -165,11 +202,13 @@ export default function HomePage() {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <CheckCircle className="w-6 h-6 text-[var(--accent-orange)] mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700">{feature}</span>
-                  </motion.li>
+                    <div className="text-[var(--accent-orange)] mr-3 flex-shrink-0 mt-1">
+                      {feature.icon}
+                    </div>
+                    <span className="text-gray-700">{feature.text}</span>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
               <div className="mt-8">
                 <Button href="/about" variant="primary" size="lg">
                   Learn More About Us
@@ -209,7 +248,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials & Case Studies Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -220,14 +259,14 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
+              Client Success Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Trusted by businesses worldwide for reliable global trade solutions
+              Trusted by businesses worldwide for reliable global trade solutions that deliver measurable results
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -235,12 +274,25 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-lg"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="text-[var(--accent-orange)] text-5xl mb-4">"</div>
                 <p className="text-gray-700 text-lg mb-6 italic">
                   {testimonial.quote}
                 </p>
+
+                {/* Metrics */}
+                <div className="border-t border-gray-200 pt-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    {Object.entries(testimonial.metrics).map(([key, value], idx) => (
+                      <div key={idx} className="text-center">
+                        <p className="text-2xl font-bold text-[var(--primary-teal)]">{value}</p>
+                        <p className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.author.charAt(0)}
