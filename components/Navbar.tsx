@@ -45,6 +45,10 @@ export default function Navbar() {
               className="w-auto h-20"
               priority
             />
+            <span className="font-heading font-bold text-3xl">
+              <span className="text-[#2A8A8B]">Trade </span>
+              <span className="text-[#F3A634]">Link</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
