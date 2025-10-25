@@ -40,13 +40,13 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Trade Link Logo"
-              width={80}
-              height={80}
-              className="w-auto h-16"
+              width={100}
+              height={100}
+              className="w-auto h-20"
               priority
             />
             <span
-              className={`font-heading font-bold text-2xl transition-colors ${
+              className={`font-heading font-bold text-3xl transition-colors ${
                 isScrolled ? 'text-[var(--primary-teal)]' : 'text-white'
               }`}
             >
