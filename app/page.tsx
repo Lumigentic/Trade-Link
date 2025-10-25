@@ -302,7 +302,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--blue-gradient-end)] text-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -310,14 +310,14 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-gray-900">
               Ready to Expand Your Global Reach?
             </h2>
-            <p className="text-xl text-gray-100 mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Get in touch today and find out how we can help your business thrive internationally
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="secondary" size="lg">
+              <Button href="/contact" variant="primary" size="lg">
                 Request a Quote <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button href="/services" variant="outline" size="lg">
