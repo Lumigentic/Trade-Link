@@ -232,34 +232,52 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-2 gap-3 sm:gap-4"
-            >
-              <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-4 sm:p-6 md:p-8 rounded-2xl text-white">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-4 sm:p-6 md:p-8 rounded-2xl text-white"
+              >
                 <Award className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">20+</h3>
                 <p className="text-gray-100 text-xs sm:text-sm md:text-base">Years Experience</p>
-              </div>
-              <div className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-4 sm:p-6 md:p-8 rounded-2xl text-white mt-4 sm:mt-6 md:mt-8">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-4 sm:p-6 md:p-8 rounded-2xl text-white mt-4 sm:mt-6 md:mt-8"
+              >
                 <Globe className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">50+</h3>
                 <p className="text-gray-100 text-xs sm:text-sm md:text-base">Countries Served</p>
-              </div>
-              <div className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-4 sm:p-6 md:p-8 rounded-2xl text-white">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-4 sm:p-6 md:p-8 rounded-2xl text-white"
+              >
                 <Ship className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">1000+</h3>
                 <p className="text-gray-100 text-xs sm:text-sm md:text-base">Shipments Handled</p>
-              </div>
-              <div className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-4 sm:p-6 md:p-8 rounded-2xl text-white mt-4 sm:mt-6 md:mt-8">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-4 sm:p-6 md:p-8 rounded-2xl text-white mt-4 sm:mt-6 md:mt-8"
+              >
                 <Package className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">100%</h3>
                 <p className="text-gray-100 text-xs sm:text-sm md:text-base">Client Satisfaction</p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
