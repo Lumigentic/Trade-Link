@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
+import ParticleBackground from '@/components/ParticleBackground';
 import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Clock, Users } from 'lucide-react';
 
 export default function HomePage() {
@@ -91,15 +91,18 @@ export default function HomePage() {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--blue-gradient-start)] via-[var(--primary-teal)] to-[var(--blue-gradient-end)] text-white overflow-hidden">
+        {/* Particle Network Background */}
+        <ParticleBackground />
+
         {/* Animated Gradient Mesh Background */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-30 z-[2]">
           <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
           <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
         </div>
 
         {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 z-[3]"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center z-10">
           <motion.div {...fadeInUp}>
@@ -199,10 +202,10 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Trade Link?
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-base sm:text-lg text-gray-600 mb-8">
                 At Trade Link, we combine decades of experience in international logistics, freight and customs to provide end-to-end trade solutions. Based in Hull (UK), we support businesses of all sizes in navigating the complexities of cross-border shipping and customs.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
@@ -215,10 +218,10 @@ export default function HomePage() {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <div className="text-[var(--accent-orange)] mr-3 flex-shrink-0 mt-1">
+                    <div className="text-[var(--accent-orange)] mr-2 sm:mr-3 flex-shrink-0 mt-1">
                       {feature.icon}
                     </div>
-                    <span className="text-gray-700">{feature.text}</span>
+                    <span className="text-sm sm:text-base text-gray-700">{feature.text}</span>
                   </motion.div>
                 ))}
               </div>
@@ -234,27 +237,27 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-3 sm:gap-4"
             >
-              <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-8 rounded-2xl text-white">
-                <Award className="w-12 h-12 mb-4" />
-                <h3 className="font-heading text-3xl font-bold mb-2">20+</h3>
-                <p className="text-gray-100">Years Experience</p>
+              <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-4 sm:p-6 md:p-8 rounded-2xl text-white">
+                <Award className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">20+</h3>
+                <p className="text-gray-100 text-xs sm:text-sm md:text-base">Years Experience</p>
               </div>
-              <div className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-8 rounded-2xl text-white mt-8">
-                <Globe className="w-12 h-12 mb-4" />
-                <h3 className="font-heading text-3xl font-bold mb-2">50+</h3>
-                <p className="text-gray-100">Countries Served</p>
+              <div className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-4 sm:p-6 md:p-8 rounded-2xl text-white mt-4 sm:mt-6 md:mt-8">
+                <Globe className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">50+</h3>
+                <p className="text-gray-100 text-xs sm:text-sm md:text-base">Countries Served</p>
               </div>
-              <div className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-8 rounded-2xl text-white">
-                <Ship className="w-12 h-12 mb-4" />
-                <h3 className="font-heading text-3xl font-bold mb-2">1000+</h3>
-                <p className="text-gray-100">Shipments Handled</p>
+              <div className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-4 sm:p-6 md:p-8 rounded-2xl text-white">
+                <Ship className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">1000+</h3>
+                <p className="text-gray-100 text-xs sm:text-sm md:text-base">Shipments Handled</p>
               </div>
-              <div className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-8 rounded-2xl text-white mt-8">
-                <Package className="w-12 h-12 mb-4" />
-                <h3 className="font-heading text-3xl font-bold mb-2">100%</h3>
-                <p className="text-gray-100">Client Satisfaction</p>
+              <div className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-4 sm:p-6 md:p-8 rounded-2xl text-white mt-4 sm:mt-6 md:mt-8">
+                <Package className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4" />
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">100%</h3>
+                <p className="text-gray-100 text-xs sm:text-sm md:text-base">Client Satisfaction</p>
               </div>
             </motion.div>
           </div>
@@ -271,10 +274,10 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Client Success Stories
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Trusted by businesses worldwide for reliable global trade solutions that deliver measurable results
             </p>
           </motion.div>
@@ -293,39 +296,43 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
                 >
                   {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-5`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
-                  <div className="relative bg-white p-8">
+                  {/* Shine Effect on Hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shine-effect pointer-events-none"></div>
+
+                  <div className="relative bg-white p-6 sm:p-8">
                     {/* Quote Icon */}
-                    <div className={`inline-block p-3 rounded-lg bg-gradient-to-br ${gradients[index]} mb-4`}>
-                      <div className="text-white text-3xl font-bold leading-none">"</div>
+                    <div className={`inline-block p-2 sm:p-3 rounded-lg bg-gradient-to-br ${gradients[index]} mb-4`}>
+                      <div className="text-white text-2xl sm:text-3xl font-bold leading-none">"</div>
                     </div>
 
-                    <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-6 leading-relaxed">
                       {testimonial.quote}
                     </p>
 
                     {/* Metrics with Cards */}
-                    <div className="grid grid-cols-2 gap-3 mb-6">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-6">
                       {Object.entries(testimonial.metrics).map(([key, value], idx) => (
-                        <div key={idx} className={`bg-gradient-to-br ${gradients[index]} p-4 rounded-xl text-center`}>
-                          <p className="text-2xl font-bold text-white mb-1">{value}</p>
-                          <p className="text-xs text-white/90 capitalize font-medium">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                        <div key={idx} className={`bg-gradient-to-br ${gradients[index]} p-3 sm:p-4 rounded-xl text-center`}>
+                          <p className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1">{value}</p>
+                          <p className="text-[10px] sm:text-xs text-white/90 capitalize font-medium">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
                         </div>
                       ))}
                     </div>
 
                     {/* Author Info */}
                     <div className="flex items-center pt-4 border-t border-gray-100">
-                      <div className={`w-14 h-14 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md`}>
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-md`}>
                         {testimonial.author.charAt(0)}
                       </div>
-                      <div className="ml-4">
-                        <p className="font-bold text-gray-900">{testimonial.author}</p>
-                        <p className="text-sm text-gray-600">{testimonial.company}</p>
+                      <div className="ml-3 sm:ml-4">
+                        <p className="font-bold text-sm sm:text-base text-gray-900">{testimonial.author}</p>
+                        <p className="text-xs sm:text-sm text-gray-600">{testimonial.company}</p>
                       </div>
                     </div>
                   </div>
