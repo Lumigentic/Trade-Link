@@ -296,14 +296,10 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                  className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
                   {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-
-                  {/* Shine Effect on Hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shine-effect pointer-events-none"></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-5`}></div>
 
                   <div className="relative bg-white p-6 sm:p-8">
                     {/* Quote Icon */}
