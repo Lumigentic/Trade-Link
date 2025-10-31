@@ -9,35 +9,48 @@ export default function ServicesPage() {
     {
       icon: <Globe className="w-16 h-16" />,
       title: 'Market Research & Entry',
-      description: "Open new doors with confidence. We provide actionable market intelligence, competitive analysis, and local entry strategies tailored to your product and sector. Our experts help you understand demand, regulations, and business culture — so you can launch faster and smarter.",
+      headline: 'Enter New Markets with Confidence.',
+      subheadline: 'Strategic research and local insight to help you launch successfully in Spain, Poland, and the UK.',
+      description: "Expanding your business internationally doesn't have to be a gamble. With Trade Link, you gain access to in-depth market intelligence, competitive benchmarking, and hands-on local support that ensure your expansion is smart, compliant, and profitable.",
       features: [
-        'Market feasibility studies',
-        'Partner and distributor research',
-        'Localization and compliance support',
-        'Competitive analysis',
+        'Detailed market analysis and feasibility reports',
+        'Competitor mapping and pricing insights',
+        'Regulatory and legal compliance guidance',
+        'Distributor and partner identification',
+        'Localization strategy and cultural adaptation',
       ],
+      whyItMatters: "We help you avoid costly mistakes and seize high-impact opportunities — turning complexity into clarity, and plans into performance.",
+      cta: "Start Your Market Entry Journey"
     },
     {
       icon: <Users className="w-16 h-16" />,
       title: 'Trader Connections',
-      description: "We bring businesses together. Trade Link connects exporters, importers, and distributors across Spain, Poland, and the UK. With our extensive network and cultural knowhow, we help you find reliable partners and negotiate successful deals.",
+      headline: 'Building Stronger Trade Relationships Across Europe.',
+      subheadline: 'Connecting exporters, importers, and distributors for seamless cross-border partnerships.',
+      description: "Trade Link specializes in connecting the right businesses between Spain, Poland, and the UK — accelerating growth through trusted relationships. We understand the challenges of international collaboration, so we bridge not only markets but also cultures and expectations.",
       features: [
-        'B2B introductions and matchmaking',
-        'Trade facilitation and negotiations',
-        'Local partner vetting',
-        'Relationship building',
+        'Tailored B2B matchmaking',
+        'Partner vetting and background checks',
+        'Negotiation and deal facilitation',
+        'Ongoing relationship management',
       ],
+      whyItMatters: "Finding the right trade partner can define your success. We leverage our network, local knowledge, and credibility to ensure your partnerships are built on trust and mutual benefit.",
+      cta: "Find Your Ideal Trade Partner"
     },
     {
       icon: <Ship className="w-16 h-16" />,
       title: 'Transport & Customs Clearance',
-      description: "Move goods effortlessly across borders. Our transport and customs experts make sure your cargo reaches its destination smoothly and compliantly. From road freight to customs paperwork, we handle the complexities — you focus on your business.",
+      headline: 'Moving Your Goods Smoothly, Every Time.',
+      subheadline: 'Reliable transport and customs clearance between Spain, Poland, and the UK.',
+      description: "From pickup to delivery, we make cross-border logistics effortless. Trade Link manages transport operations, customs documentation, and compliance checks — ensuring your shipments arrive safely, on time, and without unexpected delays.",
       features: [
-        'Road transport between UK, Poland, and Spain',
-        'Customs documentation and clearance',
-        'Real-time shipment updates',
-        'Duty and VAT optimization',
+        'Road transport between Spain, Poland, and the UK',
+        'Customs declarations and clearance support',
+        'Import/export documentation management',
+        'Real-time shipment tracking and reporting',
       ],
+      whyItMatters: "In international trade, time and accuracy are everything. Our logistics experts simplify the complex so your business can move faster, safer, and smarter.",
+      cta: "Request a Transport Quote"
     },
   ];
 
@@ -56,7 +69,7 @@ export default function ServicesPage() {
               Our <span className="text-[var(--accent-orange)]">Services</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Comprehensive trade and logistics solutions designed to help your business succeed in global markets
+              From research and market entry to transport and customs clearance — we handle every part of your trade journey
             </p>
           </motion.div>
         </div>
@@ -81,12 +94,18 @@ export default function ServicesPage() {
                   <div className="text-[var(--primary-teal)] mb-6">
                     {service.icon}
                   </div>
-                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    {service.title}
+                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                    {service.headline}
                   </h2>
-                  <p className="text-lg text-gray-600 mb-6">
+                  <p className="text-lg text-[var(--primary-teal)] font-medium mb-6">
+                    {service.subheadline}
+                  </p>
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                     {service.description}
                   </p>
+                  <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">
+                    Our {service.title} Solutions Include:
+                  </h3>
                   <ul className="space-y-3 mb-8">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
@@ -96,30 +115,15 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <Button href="/contact" variant="primary" size="lg">
-                    Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                    {service.cta} <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
                   <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] rounded-2xl p-12 text-white">
-                    <h3 className="font-heading text-2xl font-bold mb-6">Why Choose This Service?</h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-[var(--accent-orange)] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Expert team with years of experience</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-[var(--accent-orange)] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Competitive pricing and transparent costs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-[var(--accent-orange)] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>24/7 customer support</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-[var(--accent-orange)] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Proven track record of success</span>
-                      </li>
-                    </ul>
+                    <h3 className="font-heading text-2xl font-bold mb-6">Why It Matters</h3>
+                    <p className="text-lg leading-relaxed">
+                      {service.whyItMatters}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -129,7 +133,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,14 +141,19 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-heading text-4xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              <span className="text-white">Connecting Markets.</span>
+              <br />
+              <span className="text-[var(--accent-orange)]">Moving Opportunities.</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Contact us today to discuss how our services can help your business grow
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              We handle every part of your trade journey, from research to delivery.
             </p>
-            <Button href="/contact" variant="primary" size="lg">
-              Request a Quote <ArrowRight className="ml-2 w-5 h-5" />
+            <p className="text-lg text-white/80 mb-10">
+              Ready to start?
+            </p>
+            <Button href="/contact" variant="secondary" size="lg">
+              Contact Us Today <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
         </div>
