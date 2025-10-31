@@ -106,6 +106,42 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
               ))}
             </div>
           )}
+
+          {/* CTA Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-12 bg-gradient-to-br from-[#1C355E] to-[#2A4A7F] rounded-2xl p-8 md:p-10 shadow-xl"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0">
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                  <div className="text-4xl font-bold">
+                    <span className="text-white">Trade</span>
+                    <span className="text-[#E87722]">Link</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                  Need Expert Guidance?
+                </h3>
+                <p className="text-white/90 text-lg">
+                  Get help navigating UK customs systems with CDS integration, GVMS setup, and compliance support.
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <Link
+                  href="/contact"
+                  className="inline-block px-8 py-4 bg-[#E87722] hover:bg-[#d66a1a] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </article>
     </div>

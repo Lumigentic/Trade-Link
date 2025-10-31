@@ -101,7 +101,3 @@ Below is a practical list you can use as a reference. I group current/active sys
 - GOV.UK - Goods Vehicle Movement Service (GVMS) guidance
 - GOV.UK - Safety & security / Import Control System (ICS2) guidance and S&S GB material
 - HMRC Developer Hub - Customs & S&S APIs and integration guides
-
----
-
-*Need help navigating the new UK customs systems? [Contact Trade Link](/contact) for expert guidance on CDS integration, GVMS setup, and compliance support.*
