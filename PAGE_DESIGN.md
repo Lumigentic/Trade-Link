@@ -19,17 +19,23 @@ Complete UI/UX Component Reference
 
 ### Primary Colors
 ```css
-Teal (Primary):
-- HEX: #2A8A8B
-- RGB: (42, 138, 139)
-- CSS: var(--primary-teal)
+Navy Blue (Primary):
+- HEX: #1C355E
+- RGB: (28, 53, 94)
+- CSS: var(--primary-navy) / var(--primary-teal) (legacy)
 - Usage: Navigation, buttons, accents, icons
 
 Orange (Accent):
-- HEX: #F3A634
-- RGB: (243, 166, 52)
+- HEX: #E87722
+- RGB: (232, 119, 34)
 - CSS: var(--accent-orange)
 - Usage: CTAs, highlights, hover states
+
+Light Blue (Secondary):
+- HEX: #96B8D4
+- RGB: (150, 184, 212)
+- CSS: var(--secondary-blue)
+- Usage: Backgrounds, particles, secondary elements
 ```
 
 ### Secondary Colors
@@ -240,7 +246,7 @@ hover:text-white
 - 50 animated particles
 - Particles move slowly (0.5px/frame)
 - Lines connect particles within 150px
-- Teal color matching brand (#2A8A8B)
+- Light Blue color matching brand (#96B8D4)
 - Canvas-based animation
 - Performance optimized with requestAnimationFrame
 
@@ -632,7 +638,7 @@ Duration: 3s infinite
 - Canvas-based animation
 - 50 particles
 - Particles connect with lines when within 150px
-- Teal color (#2A8A8B)
+- Light Blue color (#96B8D4)
 
 ---
 
