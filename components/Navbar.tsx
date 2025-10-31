@@ -71,7 +71,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="btn-premium px-6 py-3 bg-gradient-to-r from-[var(--primary-teal)] to-[var(--accent-orange)] text-white font-semibold rounded-xl hover:shadow-card-premium-hover hover:scale-105 transition-all duration-300"
+              className="btn-premium px-6 py-3 bg-[var(--accent-orange)] hover:bg-[var(--accent-orange-dark)] text-white font-semibold rounded-xl hover:shadow-card-premium-hover hover:scale-105 transition-all duration-300"
             >
               Get Started
             </Link>
@@ -124,7 +124,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="block px-5 py-3 bg-gradient-to-r from-[var(--primary-teal)] to-[var(--accent-orange)] text-white text-center font-semibold rounded-xl hover:shadow-card-premium-hover transition-all duration-300 mt-4"
+                  className="block px-5 py-3 bg-[var(--accent-orange)] hover:bg-[var(--accent-orange-dark)] text-white text-center font-semibold rounded-xl hover:shadow-card-premium-hover transition-all duration-300 mt-4"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Get Started
