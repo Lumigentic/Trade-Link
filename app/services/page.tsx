@@ -1,44 +1,42 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
-import { Ship, Package, Globe, CheckCircle, ArrowRight } from 'lucide-react';
-import { Metadata } from 'next';
+import { Ship, Globe, CheckCircle, ArrowRight, Users } from 'lucide-react';
 
 export default function ServicesPage() {
   const services = [
     {
       icon: <Globe className="w-16 h-16" />,
-      title: 'Client Acquisition for Overseas Products',
-      description: "Looking to take your product into international markets? We'll leverage our network and market-knowledge to find the right clients for you overseas, helping you grow your reach.",
+      title: 'Market Research & Entry',
+      description: "Open new doors with confidence. We provide actionable market intelligence, competitive analysis, and local entry strategies tailored to your product and sector. Our experts help you understand demand, regulations, and business culture — so you can launch faster and smarter.",
       features: [
-        'Market research and analysis',
-        'Client identification and vetting',
+        'Market feasibility studies',
+        'Partner and distributor research',
+        'Localization and compliance support',
+        'Competitive analysis',
+      ],
+    },
+    {
+      icon: <Users className="w-16 h-16" />,
+      title: 'Trader Connections',
+      description: "We bring businesses together. Trade Link connects exporters, importers, and distributors across Spain, Poland, and the UK. With our extensive network and cultural knowhow, we help you find reliable partners and negotiate successful deals.",
+      features: [
+        'B2B introductions and matchmaking',
+        'Trade facilitation and negotiations',
+        'Local partner vetting',
         'Relationship building',
-        'Contract negotiation support',
       ],
     },
     {
       icon: <Ship className="w-16 h-16" />,
-      title: 'Door-to-Door Transport Solutions',
-      description: "From pick-up to delivery, we manage the logistics so you don't have to. Whether it's full container loads, groupage or specialised freight, we ensure your cargo arrives safely, on time, and ready for the next step.",
+      title: 'Transport & Customs Clearance',
+      description: "Move goods effortlessly across borders. Our transport and customs experts make sure your cargo reaches its destination smoothly and compliantly. From road freight to customs paperwork, we handle the complexities — you focus on your business.",
       features: [
-        'Full container loads (FCL)',
-        'Less than container loads (LCL/Groupage)',
-        'Specialised freight handling',
-        'Real-time tracking',
-      ],
-    },
-    {
-      icon: <Package className="w-16 h-16" />,
-      title: 'Import & Export Customs Clearance',
-      description: "Customs rules can be a minefield. Our experienced team handles import and export clearance, ensuring compliance, avoiding delays and minimising cost. From documentation to duty and VAT advice – we've got you covered.",
-      features: [
-        'Documentation preparation',
+        'Road transport between UK, Poland, and Spain',
+        'Customs documentation and clearance',
+        'Real-time shipment updates',
         'Duty and VAT optimization',
-        'Compliance management',
-        'Fast-track clearance',
       ],
     },
   ];
