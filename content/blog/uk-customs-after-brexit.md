@@ -5,6 +5,7 @@ author: "Trade Link Team"
 excerpt: "Brexit didn't just change trade rules - it rewired the UK's customs architecture. Learn about the digital systems that now power UK customs operations."
 category: "Customs & Compliance"
 tags: ["Brexit", "UK Customs", "CDS", "GVMS", "Compliance"]
+image: "/images/blog/uk-customs-after-brexit.png"
 ---
 
 Brexit didn't just change trade rules - it rewired the UK's customs architecture. Overnight (from the perspective of many traders) the UK became a third country to the EU, which meant customs formalities, pre-arrival checks and new IT systems had to be introduced or expanded so goods could continue to move reliably. Over the last few years HM Revenue & Customs (HMRC) and partners rolled out a suite of electronic services to support declarations, safety & security checks, transit movements and vehicle/port control. Below I explain the big picture, then list the systems you need to know about (with short descriptions and key dates where relevant).

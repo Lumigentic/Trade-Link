@@ -1,31 +1,12 @@
-'use client';
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
 import { Calendar, ArrowRight } from 'lucide-react';
+import { getAllPosts } from '@/lib/blog';
+import Image from 'next/image';
 
 export default function BlogPage() {
-  const posts = [
-    {
-      title: 'How Brexit has changed UK/EU export procedures',
-      excerpt: 'Understanding the new customs requirements and documentation needed for UK-EU trade post-Brexit.',
-      date: '2025-01-15',
-      category: 'Customs',
-    },
-    {
-      title: 'Choosing the right freight mode for your product',
-      excerpt: 'A comprehensive guide to selecting between air, sea, and land transport for your goods.',
-      date: '2025-01-10',
-      category: 'Logistics',
-    },
-    {
-      title: 'Key customs documents you need to know',
-      excerpt: 'Essential documentation for smooth international trade operations.',
-      date: '2025-01-05',
-      category: 'Documentation',
-    },
-  ];
+  const posts = getAllPosts();
 
   return (
     <div className="pt-20">
@@ -59,7 +40,18 @@ export default function BlogPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="h-48 bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)]"></div>
+                <div className="h-48 relative overflow-hidden">
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="h-full bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)]"></div>
+                  )}
+                </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-[var(--accent-orange)] bg-opacity-10 text-[var(--accent-orange)] text-sm font-medium rounded-full">
@@ -76,19 +68,12 @@ export default function BlogPage() {
                   <p className="text-gray-600 mb-4">
                     {post.excerpt}
                   </p>
-                  <Button href="#" variant="outline" size="sm">
+                  <Button href={`/blog/${post.slug}`} variant="outline" size="sm">
                     Read More <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
               </motion.article>
             ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 italic">
-              <strong>Note to Agata:</strong> Blog posts are placeholder content.
-              Use the /content/blog folder to add MDX files for actual blog posts.
-            </p>
           </div>
         </div>
       </section>
