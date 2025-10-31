@@ -119,9 +119,6 @@ export default function HomePage() {
               <Button href="/contact" variant="secondary" size="lg">
                 Start Your Expansion <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button href="/contact" variant="outline" size="lg">
-                Contact Us
-              </Button>
             </div>
           </motion.div>
         </div>
@@ -523,7 +520,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-5 justify-center"
+              className="flex justify-center"
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button href="/contact" variant="secondary" size="lg">
@@ -532,14 +529,6 @@ export default function HomePage() {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <a
-                  href="/contact"
-                  className="inline-block px-8 py-4 bg-white/20 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-[var(--primary-teal)] transition-all duration-300 shadow-lg hover:shadow-2xl"
-                >
-                  Request a Consultation
-                </a>
               </motion.div>
             </motion.div>
 
