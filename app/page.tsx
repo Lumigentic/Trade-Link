@@ -1,11 +1,20 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Button from '@/components/Button';
 import ParticleBackground from '@/components/ParticleBackground';
+import AnimatedRouteMap from '@/components/AnimatedRouteMap';
+import FloatingElements from '@/components/FloatingElements';
+import WorldMap from '@/components/WorldMap';
 import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Users } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HomePage() {
+  const { t } = useLanguage();
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, -100]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const services = [
     {
@@ -84,20 +93,34 @@ export default function HomePage() {
         {/* Particle Network Background */}
         <ParticleBackground />
 
-        {/* Animated Gradient Mesh Background */}
-        <div className="absolute inset-0 opacity-20 z-[2]">
+        {/* World Map Background */}
+        <div className="absolute inset-0 opacity-15 z-[1]">
+          <WorldMap highlightCountries={true} />
+        </div>
+
+        {/* Animated Gradient Mesh Background with Parallax */}
+        <motion.div
+          className="absolute inset-0 opacity-20 z-[2]"
+          style={{ y: y1 }}
+        >
           <div className="absolute top-20 -left-10 w-96 h-96 bg-[var(--accent-purple)]/30 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
           <div className="absolute top-0 -right-10 w-96 h-96 bg-[var(--accent-orange)]/40 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-1/3 w-96 h-96 bg-[var(--accent-pink)]/30 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
-        </div>
+        </motion.div>
 
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-5 z-[3]"></div>
+        {/* Grid Pattern Overlay with Parallax */}
+        <motion.div
+          className="absolute inset-0 bg-grid-pattern opacity-5 z-[3]"
+          style={{ y: y2 }}
+        />
 
         {/* Radial Gradient Spotlight */}
         <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/30 z-[3]"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center z-10">
+        <motion.div
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center z-10"
+          style={{ opacity }}
+        >
           {/* Hero Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -106,22 +129,22 @@ export default function HomePage() {
             className="space-y-8"
           >
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Connecting Markets.
+              {t.hero.title}
               <br className="hidden sm:block" />
               <span className="text-[var(--accent-orange)]">
-                Moving Opportunities.
+                {t.hero.titleHighlight}
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
-              Trade Link helps businesses expand, connect, and move goods seamlessly between Spain, Poland, and the United Kingdom - from research and market entry to transport and customs clearance.
+              {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="secondary" size="lg">
-                Start Your Expansion <ArrowRight className="ml-2 w-5 h-5" />
+                {t.hero.cta} <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
@@ -157,6 +180,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Animated Route Map Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Floating Elements Background */}
+        <FloatingElements />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Connecting Three Major Markets
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Our transport network seamlessly links the United Kingdom, Poland, and Spain with multimodal logistics solutions
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <AnimatedRouteMap />
+          </motion.div>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 max-w-4xl mx-auto"
+          >
+            <div className="text-center p-4 bg-white rounded-xl shadow-md">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-2">24/7</div>
+              <div className="text-xs sm:text-sm text-gray-600">Tracking</div>
+            </div>
+            <div className="text-center p-4 bg-white rounded-xl shadow-md">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--accent-orange)] mb-2">3</div>
+              <div className="text-xs sm:text-sm text-gray-600">Countries</div>
+            </div>
+            <div className="text-center p-4 bg-white rounded-xl shadow-md">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-2">48h</div>
+              <div className="text-xs sm:text-sm text-gray-600">Avg Transit</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Decorative Elements */}
@@ -179,7 +256,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8" style={{ perspective: '1500px' }}>
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -187,18 +264,47 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                whileHover={{ y: -12, transition: { duration: 0.4 } }}
+                whileHover={{
+                  y: -20,
+                  rotateX: 5,
+                  rotateY: index === 0 ? 5 : index === 2 ? -5 : 0,
+                  scale: 1.05,
+                  transition: { duration: 0.4 }
+                }}
                 className="group relative bg-white p-8 rounded-3xl shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden"
+                style={{ transformStyle: 'preserve-3d' }}
               >
+                {/* Gradient Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-teal)]/5 via-transparent to-[var(--accent-orange)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+
                 {/* Border on Hover */}
                 <div className="absolute inset-0 border-2 border-[var(--primary-teal)] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Shine Effect */}
+                <motion.div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                  initial={{ x: '-100%', opacity: 0 }}
+                  whileHover={{
+                    x: '100%',
+                    opacity: [0, 0.3, 0],
+                    transition: { duration: 0.8 }
+                  }}
+                  style={{
+                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                  }}
+                />
 
                 <div className="relative z-10">
                   {/* Icon with Glow Effect */}
                   <motion.div
-                    whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
+                    whileHover={{
+                      scale: 1.15,
+                      rotate: [0, -10, 10, 0],
+                      z: 50,
+                    }}
                     transition={{ duration: 0.5 }}
                     className="inline-flex p-5 rounded-2xl bg-[var(--primary-teal)] text-white mb-6 shadow-lg group-hover:shadow-2xl group-hover:glow-teal transition-all duration-500"
+                    style={{ transformStyle: 'preserve-3d' }}
                   >
                     {service.icon}
                   </motion.div>
@@ -212,7 +318,7 @@ export default function HomePage() {
 
                   {/* Premium Button */}
                   <motion.div
-                    whileHover={{ x: 5 }}
+                    whileHover={{ x: 5, scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
                     <Button href="/services" variant="outline" size="sm">
@@ -230,8 +336,13 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* World Map Background */}
+        <div className="absolute inset-0 opacity-30">
+          <WorldMap highlightCountries={true} />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +22,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: t.nav.home },
+    { href: '/about', label: t.nav.about },
+    { href: '/services', label: t.nav.services },
+    { href: '/blog', label: t.nav.blog },
+    { href: '/contact', label: t.nav.contact },
   ];
 
   return (
@@ -49,7 +51,7 @@ export default function Navbar() {
             />
             <span className="font-heading font-bold text-xl sm:text-2xl md:text-3xl">
               <span className="text-[#E87722]">Trade</span>
-              <span className="text-[#1C355E]"> Link</span>
+              <span className={`transition-colors duration-300 ${isScrolled ? 'text-[#1C355E]' : 'text-white'}`}> Link</span>
             </span>
           </Link>
 
@@ -69,11 +71,37 @@ export default function Navbar() {
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--primary-teal)] to-[var(--accent-orange)] group-hover:w-full transition-all duration-300`}></span>
               </Link>
             ))}
+
+            {/* Language Switcher */}
+            <div className="relative flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20">
+              <Globe className="w-4 h-4 text-white" />
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-1 rounded text-sm font-semibold transition-all ${
+                  language === 'en'
+                    ? 'bg-[var(--accent-orange)] text-white'
+                    : 'text-white/70 hover:text-white'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLanguage('pl')}
+                className={`px-2 py-1 rounded text-sm font-semibold transition-all ${
+                  language === 'pl'
+                    ? 'bg-[var(--accent-orange)] text-white'
+                    : 'text-white/70 hover:text-white'
+                }`}
+              >
+                PL
+              </button>
+            </div>
+
             <Link
               href="/contact"
               className="btn-premium px-6 py-3 bg-[var(--accent-orange)] hover:bg-[var(--accent-orange-dark)] text-white font-semibold rounded-xl hover:shadow-card-premium-hover hover:scale-105 transition-all duration-300"
             >
-              Get Started
+              {t.nav.getStarted}
             </Link>
           </div>
 
@@ -122,12 +150,37 @@ export default function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
               >
+                {/* Mobile Language Switcher */}
+                <div className="flex items-center justify-center gap-3 px-5 py-3 bg-gradient-to-r from-[var(--primary-teal)]/10 to-[var(--accent-orange)]/10 rounded-xl mt-4">
+                  <Globe className="w-4 h-4 text-gray-700" />
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                      language === 'en'
+                        ? 'bg-[var(--accent-orange)] text-white'
+                        : 'text-gray-700 hover:bg-gray-100'
+                    }`}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => setLanguage('pl')}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                      language === 'pl'
+                        ? 'bg-[var(--accent-orange)] text-white'
+                        : 'text-gray-700 hover:bg-gray-100'
+                    }`}
+                  >
+                    Polski
+                  </button>
+                </div>
+
                 <Link
                   href="/contact"
                   className="block px-5 py-3 bg-[var(--accent-orange)] hover:bg-[var(--accent-orange-dark)] text-white text-center font-semibold rounded-xl hover:shadow-card-premium-hover transition-all duration-300 mt-4"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
+                  {t.nav.getStarted}
                 </Link>
               </motion.div>
             </div>

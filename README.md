@@ -1,16 +1,23 @@
-# Trade Link Website
+# Trade Link - International Trade Solutions
 
-A modern, professional website for Trade Link Customs & Logistics Ltd, built with Next.js, TypeScript, and Tailwind CSS.
+Modern, bilingual website for Trade Link - connecting businesses between UK, Poland, and Spain.
 
-## 🚀 Project Overview
+![Next.js](https://img.shields.io/badge/Next.js-16.0-black)
+![React](https://img.shields.io/badge/React-19.2-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8)
 
-This is a full-stack, responsive website featuring:
-- Modern design inspired by Avast.io
-- Brand colors: Navy Blue (#1C355E), Orange (#E87722), and Light Blue (#96B8D4)
-- Smooth animations with Framer Motion
-- SEO optimized
-- Contact form with API endpoint
-- Blog-ready with MDX support
+## ✨ Features
+
+- 🌍 **Bilingual** - English & Polish with easy language switching
+- 🎨 **Modern Design** - Premium UI with animations (Framer Motion)
+- 📱 **Fully Responsive** - Perfect on all devices
+- ⚡ **Fast Performance** - Optimized with Next.js 16 & Turbopack
+- 🎯 **SEO Optimized** - Meta tags, structured data, sitemap
+- 📝 **Blog System** - MDX-powered blog with syntax highlighting
+- 💬 **WhatsApp Integration** - Floating contact button
+- 🗺️ **Interactive Maps** - Animated route visualizations
+- ✅ **Production Ready** - Built and tested
 
 ## 🎨 Brand Colors
 
@@ -38,7 +45,9 @@ This is a full-stack, responsive website featuring:
 - **Icons**: Lucide React
 - **Deployment**: Vercel
 
-## 📦 Quick Start
+## 🚀 Quick Start
+
+### Development
 
 ```bash
 # Install dependencies
@@ -47,6 +56,12 @@ npm install
 # Run development server
 npm run dev
 
+# Open http://localhost:3000
+```
+
+### Production Build
+
+```bash
 # Build for production
 npm run build
 
@@ -54,36 +69,140 @@ npm run build
 npm start
 ```
 
-## 🚀 Deployment to Vercel
+## 🌐 Deployment
 
-1. Push to GitHub (Lumigentic organization)
-2. Import repository in Vercel
-3. Deploy with one click
-4. Add custom domain: trade-link.co.uk
+### Vercel (Recommended)
 
-See full deployment instructions in the comments above.
+1. Push to GitHub
+2. Import project in [Vercel](https://vercel.com)
+3. Deploy! ✅
 
-## ✅ What's Complete
+See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for detailed guide.
 
-- ✅ Home page with Hero, Services, Testimonials
-- ✅ Services page with detailed offerings
-- ✅ Contact page with form + Google Maps
-- ✅ About Us page
-- ✅ Blog layout (ready for MDX posts)
-- ✅ Privacy Policy template
-- ✅ Responsive design (mobile/tablet/desktop)
-- ✅ SEO configuration
-- ✅ Contact form API endpoint
+### Other Options
 
-## 📝 Next Steps
+See [DEPLOYMENT.md](DEPLOYMENT.md) for:
+- Netlify
+- Self-hosted (VPS)
+- Docker
 
-1. Configure email service (SendGrid/Resend) in `.env.local`
-2. Update About Us content (team, timeline)
-3. Add blog posts in `content/blog/`
-4. Legal review of Privacy Policy
-5. Deploy to Vercel
-6. Configure custom domain
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Content**: MDX (Blog)
+- **i18n**: Custom Context API
+- **Build**: Turbopack
+
+## 🌍 Multi-Language
+
+The site supports English and Polish:
+
+- Translations in `/lib/i18n.ts`
+- Language switcher in navbar
+- Saved preference in localStorage
+- Easy to add more languages
+
+## 📝 Blog
+
+Add new blog posts in `/content/blog/`:
+
+```markdown
+---
+title: "Your Post Title"
+date: "2025-10-31"
+author: "Author Name"
+excerpt: "Short description"
+category: "Category"
+tags: ["tag1", "tag2"]
+image: "/blog/post-image.jpg"
+---
+
+Your content here in Markdown...
+```
+
+## 🎨 Customization
+
+### Colors
+
+Edit colors in `app/globals.css`:
+
+```css
+:root {
+  --primary-teal: #0EA5E9;
+  --accent-orange: #E87722;
+  /* ... */
+}
+```
+
+### Content
+
+- **Homepage**: `app/page.tsx`
+- **Translations**: `lib/i18n.ts`
+- **SEO**: `lib/seo.config.ts`
+- **WhatsApp Number**: `lib/i18n.ts` (whatsapp section)
+
+## 📦 Scripts
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm start        # Start production server
+npm run lint     # Run ESLint
+```
+
+## 🔧 Environment Variables
+
+Copy `.env.example` to `.env.local`:
+
+```bash
+cp .env.example .env.local
+```
+
+Currently no required variables, but template includes:
+- Site URL
+- Analytics IDs
+- Contact form settings
+- Social media links
+
+## 📊 Performance
+
+- ✅ Static Generation
+- ✅ Image Optimization (AVIF/WebP)
+- ✅ Code Splitting
+- ✅ Tree Shaking
+- ✅ Minification
+- ✅ Gzip Compression
+
+## 🎯 SEO
+
+- ✅ Meta tags
+- ✅ Open Graph
+- ✅ Twitter Cards
+- ✅ Structured data
+- ✅ Sitemap
+- ✅ Robots.txt
+
+## 📱 Contact Integration
+
+- **WhatsApp**: Floating button with +44 7429 980548
+- **Contact Form**: `/contact` page
+- **Social Links**: Footer
+
+## 📄 License
+
+This project is proprietary software for Trade Link.
+
+## 📞 Support
+
+For questions or support:
+- WhatsApp: +44 7429 980548
 
 ---
 
-Built with ❤️ by [Lumigentic](https://lumigentic.com)
+**Built with ❤️ for Trade Link by [Lumigentic](https://lumigentic.com)**
+
+🚀 **[Deploy to Vercel](https://vercel.com/new)**
