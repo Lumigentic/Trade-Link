@@ -54,7 +54,7 @@ export default function HomePage() {
       company: "Manufacturing Company",
       metrics: {
         timeframe: "3 months",
-        achievement: "European market entry",
+        achievement: "Market entry",
       },
     },
     {
@@ -62,8 +62,8 @@ export default function HomePage() {
       author: "Client B",
       company: "Retail Business",
       metrics: {
-        savings: "50+ hours/month",
-        improvement: "Real-time tracking",
+        savings: "50+ hours",
+        improvement: "Real-time",
       },
     },
     {
@@ -72,7 +72,7 @@ export default function HomePage() {
       company: "E-commerce Platform",
       metrics: {
         result: "Zero delays",
-        compliance: "100% compliant",
+        compliance: "100%",
       },
     },
   ];
@@ -424,12 +424,12 @@ export default function HomePage() {
                           key={idx}
                           whileHover={{ scale: 1.05 }}
                           transition={{ duration: 0.3 }}
-                          className={`relative ${colors[index]} p-4 sm:p-5 rounded-2xl text-center shadow-lg overflow-hidden group/metric`}
+                          className={`relative ${colors[index]} p-3 sm:p-4 rounded-2xl text-center shadow-lg overflow-hidden group/metric`}
                         >
                           <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/metric:opacity-100 transition-opacity duration-300"></div>
                           <div className="relative z-10">
-                            <p className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-md">{value}</p>
-                            <p className="text-xs sm:text-sm text-white/95 capitalize font-medium">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                            <p className="text-lg sm:text-xl font-bold text-white mb-0.5 drop-shadow-md leading-tight">{value}</p>
+                            <p className="text-[10px] sm:text-xs text-white/95 capitalize font-medium leading-tight">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
                           </div>
                         </motion.div>
                       ))}
