@@ -8,7 +8,7 @@ export default function ServicesPage() {
   const services = [
     {
       icon: <Globe className="w-16 h-16" />,
-      title: 'Market Research & Entry',
+      title: 'Market Entry',
       headline: 'Enter New Markets with Confidence.',
       subheadline: 'Strategic research and local insight to help you launch successfully in Spain, Poland, and the UK.',
       description: "Expanding your business internationally doesn't have to be a gamble. With Trade Link, you gain access to in-depth market intelligence, competitive benchmarking, and hands-on local support that ensure your expansion is smart, compliant, and profitable.",
@@ -24,7 +24,7 @@ export default function ServicesPage() {
     },
     {
       icon: <Users className="w-16 h-16" />,
-      title: 'Trader Connections',
+      title: 'Trader Connection',
       headline: 'Building Stronger Trade Relationships Across Europe.',
       subheadline: 'Connecting exporters, importers, and distributors for seamless cross-border partnerships.',
       description: "Trade Link specializes in connecting the right businesses between Spain, Poland, and the UK — accelerating growth through trusted relationships. We understand the challenges of international collaboration, so we bridge not only markets but also cultures and expectations.",
@@ -39,7 +39,7 @@ export default function ServicesPage() {
     },
     {
       icon: <Ship className="w-16 h-16" />,
-      title: 'Transport & Customs Clearance',
+      title: 'Transport & Customs',
       headline: 'Moving Your Goods Smoothly, Every Time.',
       subheadline: 'Reliable transport and customs clearance between Spain, Poland, and the UK.',
       description: "From pickup to delivery, we make cross-border logistics effortless. Trade Link manages transport operations, customs documentation, and compliance checks — ensuring your shipments arrive safely, on time, and without unexpected delays.",
