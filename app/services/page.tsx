@@ -57,7 +57,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] text-white py-24">
+      <section className="bg-[var(--primary-teal)] text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export default function ServicesPage() {
                   </Button>
                 </div>
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                  <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] rounded-2xl p-12 text-white">
+                  <div className="bg-[var(--primary-teal)] rounded-2xl p-12 text-white">
                     <h3 className="font-heading text-2xl font-bold mb-6">Why It Matters</h3>
                     <p className="text-lg leading-relaxed">
                       {service.whyItMatters}
@@ -133,7 +133,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] text-white">
+      <section className="py-20 bg-[var(--primary-teal)] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

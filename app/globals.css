@@ -24,11 +24,7 @@
   --blue-gradient-mid: #1C355E;
   --blue-gradient-end: #2A4A7C;
 
-  /* Elegant Gradients */
-  --gradient-primary: linear-gradient(135deg, #1C355E 0%, #142747 100%);
-  --gradient-accent: linear-gradient(135deg, #E87722 0%, #C96419 100%);
-  --gradient-hero: linear-gradient(135deg, #0F1F3D 0%, #1C355E 50%, #2A4A7C 100%);
-  --gradient-secondary: linear-gradient(135deg, #96B8D4 0%, #7BA3C3 100%);
+  /* Removed gradient utilities - using solid colors instead */
 
   /* Luxury Neutrals */
   --gray-50: #FAFBFC;
@@ -135,13 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--primary-teal), var(--accent-orange));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+/* Gradient Text - Removed, use solid colors instead */
 
 /* Shine Effect */
 @keyframes shine {
@@ -290,11 +280,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease-out;
 }
 
-/* Premium Borders */
+/* Premium Borders - Removed gradient, use solid border colors instead */
 .border-gradient {
-  border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, var(--primary-teal), var(--accent-orange)) border-box;
+  border: 2px solid var(--primary-teal);
 }
 
 /* Smooth Scrollbar */
@@ -307,10 +295,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--primary-teal), var(--accent-orange));
+  background: var(--primary-teal);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--primary-teal-dark), var(--accent-orange-dark));
+  background: var(--primary-teal-dark);
 }

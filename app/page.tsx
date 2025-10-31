@@ -108,7 +108,7 @@ export default function HomePage() {
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Connecting Markets.
               <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-[var(--primary-teal-light)] via-[var(--accent-orange)] to-[var(--accent-orange-light)] bg-clip-text text-transparent">
+              <span className="text-[var(--accent-orange)]">
                 Moving Opportunities.
               </span>
             </h1>
@@ -193,25 +193,15 @@ export default function HomePage() {
                 whileHover={{ y: -12, transition: { duration: 0.4 } }}
                 className="group relative bg-white p-8 rounded-3xl shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden"
               >
-                {/* Animated Gradient Border on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-teal)] via-[var(--blue-gradient-mid)] to-[var(--accent-orange)] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[2px]">
-                  <div className="absolute inset-[2px] bg-white rounded-3xl"></div>
-                </div>
-
-                {/* Gradient Overlay on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-teal)]/5 via-transparent to-[var(--accent-orange)]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                {/* Shine Effect on Hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-                </div>
+                {/* Border on Hover */}
+                <div className="absolute inset-0 border-2 border-[var(--primary-teal)] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <div className="relative z-10">
                   {/* Icon with Glow Effect */}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
                     transition={{ duration: 0.5 }}
-                    className="inline-flex p-5 rounded-2xl bg-gradient-to-br from-[var(--primary-teal)] to-[var(--accent-orange)] text-white mb-6 shadow-lg group-hover:shadow-2xl group-hover:glow-teal transition-all duration-500"
+                    className="inline-flex p-5 rounded-2xl bg-[var(--primary-teal)] text-white mb-6 shadow-lg group-hover:shadow-2xl group-hover:glow-teal transition-all duration-500"
                   >
                     {service.icon}
                   </motion.div>
@@ -235,7 +225,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Corner Accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[var(--accent-orange)]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-[var(--accent-orange)]/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </motion.div>
             ))}
           </div>
@@ -289,7 +279,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="group relative bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 overflow-hidden"
+                className="group relative bg-[var(--primary-teal)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
@@ -311,7 +301,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="group relative bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 mt-6 sm:mt-8 overflow-hidden"
+                className="group relative bg-[var(--accent-orange)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 mt-6 sm:mt-8 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
@@ -333,7 +323,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="group relative bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 overflow-hidden"
+                className="group relative bg-[var(--primary-teal)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
@@ -355,7 +345,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="group relative bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 mt-6 sm:mt-8 overflow-hidden"
+                className="group relative bg-[var(--primary-teal-dark)] p-6 sm:p-8 rounded-3xl text-white shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500 mt-6 sm:mt-8 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
@@ -395,10 +385,10 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => {
-              const gradients = [
-                'from-[var(--primary-teal)] to-[var(--blue-gradient-end)]',
-                'from-[var(--accent-orange)] to-[var(--accent-orange-dark)]',
-                'from-[var(--blue-gradient-start)] to-[var(--primary-teal)]',
+              const colors = [
+                'bg-[var(--primary-teal)]',
+                'bg-[var(--accent-orange)]',
+                'bg-[var(--primary-teal-dark)]',
               ];
               return (
                 <motion.div
@@ -410,20 +400,15 @@ export default function HomePage() {
                   whileHover={{ y: -8, transition: { duration: 0.4 } }}
                   className="group relative overflow-hidden rounded-3xl shadow-card-premium hover:shadow-card-premium-hover transition-all duration-500"
                 >
-                  {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
-
-                  {/* Animated Border */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[2px] rounded-3xl`}>
-                    <div className="absolute inset-[2px] bg-white rounded-3xl"></div>
-                  </div>
+                  {/* Border on Hover */}
+                  <div className="absolute inset-0 border-2 border-[var(--primary-teal)] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="relative bg-white p-8 sm:p-10">
                     {/* Quote Icon with Animation */}
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: [0, -10, 10, 0] }}
                       transition={{ duration: 0.5 }}
-                      className={`inline-block p-3 sm:p-4 rounded-2xl bg-gradient-to-br ${gradients[index]} mb-6 shadow-lg group-hover:shadow-2xl transition-shadow duration-500`}
+                      className={`inline-block p-3 sm:p-4 rounded-2xl ${colors[index]} mb-6 shadow-lg group-hover:shadow-2xl transition-shadow duration-500`}
                     >
                       <div className="text-white text-3xl sm:text-4xl font-bold leading-none drop-shadow-md">"</div>
                     </motion.div>
@@ -439,7 +424,7 @@ export default function HomePage() {
                           key={idx}
                           whileHover={{ scale: 1.05 }}
                           transition={{ duration: 0.3 }}
-                          className={`relative bg-gradient-to-br ${gradients[index]} p-4 sm:p-5 rounded-2xl text-center shadow-lg overflow-hidden group/metric`}
+                          className={`relative ${colors[index]} p-4 sm:p-5 rounded-2xl text-center shadow-lg overflow-hidden group/metric`}
                         >
                           <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/metric:opacity-100 transition-opacity duration-300"></div>
                           <div className="relative z-10">
@@ -455,7 +440,7 @@ export default function HomePage() {
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 360 }}
                         transition={{ duration: 0.6 }}
-                        className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-lg`}
+                        className={`w-14 h-14 sm:w-16 sm:h-16 ${colors[index]} rounded-full flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-lg`}
                       >
                         {testimonial.author.charAt(0)}
                       </motion.div>
@@ -465,9 +450,6 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Corner Decoration */}
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </motion.div>
               );
             })}
@@ -521,7 +503,7 @@ export default function HomePage() {
             >
               Ready to expand your
               <br />
-              <span className="bg-gradient-to-r from-[var(--accent-orange-light)] to-white bg-clip-text text-transparent">
+              <span className="text-[var(--accent-orange-light)]">
                 business across Europe?
               </span>
             </motion.h2>
