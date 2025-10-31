@@ -113,7 +113,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
-              Trade Link helps businesses expand, connect, and move goods seamlessly between Spain, Poland, and the United Kingdom — from research and market entry to transport and customs clearance.
+              Trade Link helps businesses expand, connect, and move goods seamlessly between Spain, Poland, and the United Kingdom - from research and market entry to transport and customs clearance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="secondary" size="lg">
@@ -151,7 +151,7 @@ export default function HomePage() {
               Empowering Cross-Border Growth
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-4">
-              At Trade Link, we're more than just a logistics or consulting firm — we're your bridge to international success. With deep expertise in the Spanish, Polish, and UK markets, we help companies enter new territories, find trusted partners, and deliver goods with zero hassle.
+              At Trade Link, we're more than just a logistics or consulting firm - we're your bridge to international success. With deep expertise in the Spanish, Polish, and UK markets, we help companies enter new territories, find trusted partners, and deliver goods with zero hassle.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
               Whether you're a manufacturer, importer, or distributor, Trade Link is your single point of contact for research, connections, and compliant transport solutions that drive growth.

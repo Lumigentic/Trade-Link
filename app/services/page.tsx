@@ -19,7 +19,7 @@ export default function ServicesPage() {
         'Distributor and partner identification',
         'Localization strategy and cultural adaptation',
       ],
-      whyItMatters: "We help you avoid costly mistakes and seize high-impact opportunities — turning complexity into clarity, and plans into performance.",
+      whyItMatters: "We help you avoid costly mistakes and seize high-impact opportunities - turning complexity into clarity, and plans into performance.",
       cta: "Start Your Market Entry Journey"
     },
     {
@@ -27,7 +27,7 @@ export default function ServicesPage() {
       title: 'Trader Connection',
       headline: 'Building Stronger Trade Relationships Across Europe.',
       subheadline: 'Connecting exporters, importers, and distributors for seamless cross-border partnerships.',
-      description: "Trade Link specializes in connecting the right businesses between Spain, Poland, and the UK — accelerating growth through trusted relationships. We understand the challenges of international collaboration, so we bridge not only markets but also cultures and expectations.",
+      description: "Trade Link specializes in connecting the right businesses between Spain, Poland, and the UK - accelerating growth through trusted relationships. We understand the challenges of international collaboration, so we bridge not only markets but also cultures and expectations.",
       features: [
         'Tailored B2B matchmaking',
         'Partner vetting and background checks',
@@ -42,7 +42,7 @@ export default function ServicesPage() {
       title: 'Transport & Customs',
       headline: 'Moving Your Goods Smoothly, Every Time.',
       subheadline: 'Reliable transport and customs clearance between Spain, Poland, and the UK.',
-      description: "From pickup to delivery, we make cross-border logistics effortless. Trade Link manages transport operations, customs documentation, and compliance checks — ensuring your shipments arrive safely, on time, and without unexpected delays.",
+      description: "From pickup to delivery, we make cross-border logistics effortless. Trade Link manages transport operations, customs documentation, and compliance checks - ensuring your shipments arrive safely, on time, and without unexpected delays.",
       features: [
         'Road transport between Spain, Poland, and the UK',
         'Customs declarations and clearance support',
@@ -69,7 +69,7 @@ export default function ServicesPage() {
               Our <span className="text-[var(--accent-orange)]">Services</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              From research and market entry to transport and customs clearance — we handle every part of your trade journey
+              From research and market entry to transport and customs clearance - we handle every part of your trade journey
             </p>
           </motion.div>
         </div>
