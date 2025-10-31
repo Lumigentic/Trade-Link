@@ -29,29 +29,29 @@ export default function ParticleBackground() {
       speedY: number;
       opacity: number;
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+      constructor(canvasWidth: number, canvasHeight: number) {
+        this.x = Math.random() * canvasWidth;
+        this.y = Math.random() * canvasHeight;
         this.size = Math.random() * 3 + 1;
         this.speedX = (Math.random() - 0.5) * 0.5;
         this.speedY = (Math.random() - 0.5) * 0.5;
         this.opacity = Math.random() * 0.5 + 0.2;
       }
 
-      update() {
+      update(canvasWidth: number, canvasHeight: number) {
         this.x += this.speedX;
         this.y += this.speedY;
 
         // Wrap around edges
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
+        if (this.x > canvasWidth) this.x = 0;
+        if (this.x < 0) this.x = canvasWidth;
+        if (this.y > canvasHeight) this.y = 0;
+        if (this.y < 0) this.y = canvasHeight;
       }
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = `rgba(42, 138, 139, ${this.opacity})`;
+        ctx.fillStyle = `rgba(150, 184, 212, ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -63,7 +63,7 @@ export default function ParticleBackground() {
     const particleCount = 50;
 
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(canvas.width, canvas.height));
     }
 
     // Animation loop
@@ -71,7 +71,7 @@ export default function ParticleBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle) => {
-        particle.update();
+        particle.update(canvas.width, canvas.height);
         particle.draw();
       });
 
@@ -83,7 +83,7 @@ export default function ParticleBackground() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 150) {
-            ctx.strokeStyle = `rgba(42, 138, 139, ${0.1 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(150, 184, 212, ${0.1 * (1 - distance / 150)})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);

@@ -29,8 +29,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'glass-premium shadow-card-premium'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,8 +48,8 @@ export default function Navbar() {
               priority
             />
             <span className="font-heading font-bold text-xl sm:text-2xl md:text-3xl">
-              <span className="text-[#2A8A8B]">Trade </span>
-              <span className="text-[#F3A634]">Link</span>
+              <span className="text-[#1C355E]">Trade </span>
+              <span className="text-[#E87722]">Link</span>
             </span>
           </Link>
 
@@ -57,18 +59,19 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-medium transition-colors ${
+                className={`relative font-semibold transition-all duration-300 group ${
                   isScrolled
-                    ? 'text-[#2A8A8B] hover:text-[var(--primary-teal-dark)]'
-                    : 'text-white hover:text-gray-200'
+                    ? 'text-gray-700 hover:text-[var(--primary-teal)]'
+                    : 'text-white hover:text-[var(--accent-orange-light)]'
                 }`}
               >
                 {link.label}
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--primary-teal)] to-[var(--accent-orange)] group-hover:w-full transition-all duration-300`}></span>
               </Link>
             ))}
             <Link
               href="/contact"
-              className="px-6 py-2 bg-[var(--accent-orange)] text-white rounded-lg hover:bg-[var(--accent-orange-dark)] transition-all duration-200 shadow-md hover:shadow-lg"
+              className="btn-premium px-6 py-3 bg-gradient-to-r from-[var(--primary-teal)] to-[var(--accent-orange)] text-white font-semibold rounded-xl hover:shadow-card-premium-hover hover:scale-105 transition-all duration-300"
             >
               Get Started
             </Link>
@@ -94,27 +97,39 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-gray-200"
+            transition={{ duration: 0.3 }}
+            className="md:hidden glass-premium border-t border-white/20"
           >
-            <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <Link
+            <div className="px-4 py-6 space-y-2">
+              {navLinks.map((link, index) => (
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  className="block px-4 py-2 text-[#2A8A8B] hover:bg-gray-100 rounded-lg transition-colors"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="block px-5 py-3 text-gray-700 font-semibold hover:bg-gradient-to-r hover:from-[var(--primary-teal)]/10 hover:to-[var(--accent-orange)]/10 rounded-xl transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.1 }}
+              >
+                <Link
+                  href="/contact"
+                  className="block px-5 py-3 bg-gradient-to-r from-[var(--primary-teal)] to-[var(--accent-orange)] text-white text-center font-semibold rounded-xl hover:shadow-card-premium-hover transition-all duration-300 mt-4"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.label}
+                  Get Started
                 </Link>
-              ))}
-              <Link
-                href="/contact"
-                className="block px-4 py-2 bg-[var(--accent-orange)] text-white text-center rounded-lg hover:bg-[var(--accent-orange-dark)] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Get Started
-              </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}

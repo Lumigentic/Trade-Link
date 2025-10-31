@@ -14,17 +14,20 @@ This is a full-stack, responsive website featuring:
 
 ## 🎨 Brand Colors
 
-The two main colours from the Trade Link logo:
+**Primary Navy:**
+- HEX: `#1C355E`
+- RGB: `(28, 53, 94)`
+- Usage: Primary brand color, navigation, headings, buttons
 
-**Teal-Blue (left shape):**
-- HEX: `#2A8A8B`
-- RGB: `(42, 138, 139)`
-- CMYK: `(70%, 0%, 0%, 45%)`
+**Accent Orange:**
+- HEX: `#E87722`
+- RGB: `(232, 119, 34)`
+- Usage: Call-to-actions, highlights, accents
 
-**Warm Orange (right shape):**
-- HEX: `#F3A634`
-- RGB: `(243, 166, 52)`
-- CMYK: `(0%, 32%, 79%, 5%)`
+**Secondary Light Blue:**
+- HEX: `#96B8D4`
+- RGB: `(150, 184, 212)`
+- Usage: Secondary elements, backgrounds, gradients
 
 ## 🛠️ Tech Stack
 
