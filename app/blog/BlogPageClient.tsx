@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -44,13 +43,13 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="h-48 relative overflow-hidden">
+                <div className="h-48 relative overflow-hidden bg-gray-50">
                   {post.image ? (
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   ) : (
                     <div className="h-full bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)]"></div>
