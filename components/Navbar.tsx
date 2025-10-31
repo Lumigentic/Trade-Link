@@ -49,7 +49,7 @@ export default function Navbar() {
             />
             <span className="font-heading font-bold text-xl sm:text-2xl md:text-3xl">
               <span className="text-[#E87722]">Trade</span>
-              <span className={`transition-colors duration-300 ${isScrolled ? 'text-[#1C355E]' : 'text-white'}`}> Link</span>
+              <span className="text-[#1C355E]"> Link</span>
             </span>
           </Link>
 
