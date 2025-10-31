@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
 import ParticleBackground from '@/components/ParticleBackground';
-import AnimatedLogo from '@/components/AnimatedLogo';
 import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Users } from 'lucide-react';
 
 export default function HomePage() {
@@ -98,47 +97,32 @@ export default function HomePage() {
         {/* Radial Gradient Spotlight */}
         <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/30 z-[3]"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
-          {/* Animated Logo Centerpiece */}
-          <div className="mb-32 md:mb-40">
-            <AnimatedLogo />
-          </div>
-
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center z-10">
           {/* Hero Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 4.5 }}
-            className="mt-20"
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Connecting Markets.
               <br className="hidden sm:block" />
               <span className="bg-gradient-to-r from-[var(--primary-teal-light)] via-[var(--accent-orange)] to-[var(--accent-orange-light)] bg-clip-text text-transparent">
                 Moving Opportunities.
               </span>
             </h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 5 }}
-              className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto px-4 leading-relaxed"
-            >
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
               Trade Link helps businesses expand, connect, and move goods seamlessly between Spain, Poland, and the United Kingdom — from research and market entry to transport and customs clearance.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 5.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="secondary" size="lg">
                 Start Your Expansion <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button href="/contact" variant="outline" size="lg">
                 Contact Us
               </Button>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
