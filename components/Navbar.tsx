@@ -48,7 +48,7 @@ export default function Navbar() {
               priority
             />
             <span className="font-heading font-bold text-xl sm:text-2xl md:text-3xl">
-              <span className="text-[#1C355E]">Trade </span>
+              <span className={`transition-colors duration-300 ${isScrolled ? 'text-[#1C355E]' : 'text-white'}`}>Trade </span>
               <span className="text-[#E87722]">Link</span>
             </span>
           </Link>
