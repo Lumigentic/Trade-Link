@@ -119,8 +119,8 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
               <div className="flex-shrink-0">
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
                   <div className="text-4xl font-bold">
-                    <span className="text-white">Trade</span>
-                    <span className="text-[#E87722]">Link</span>
+                    <span className="text-[#E87722]">Trade</span>
+                    <span className="text-white"> Link</span>
                   </div>
                 </div>
               </div>
