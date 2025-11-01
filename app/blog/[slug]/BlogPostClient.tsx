@@ -129,39 +129,25 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
         {/* Article Content */}
         <div className="prose prose-lg max-w-none
           prose-headings:font-heading prose-headings:font-bold prose-headings:text-[#1C355E]
-          prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-4 prose-h2:border-b prose-h2:border-gray-200
-          prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-          prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-[var(--primary-teal)]
-          prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
-          prose-a:text-[var(--primary-teal)] prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-          prose-strong:font-bold prose-strong:text-gray-900
-          prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-          prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-          prose-li:text-gray-700 prose-li:my-2
-          prose-blockquote:border-l-4 prose-blockquote:border-[var(--accent-orange)] prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-600 prose-blockquote:my-8
-          prose-code:text-[var(--primary-teal)] prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
-          prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:my-8
+          prose-h2:text-[32px] prose-h2:mt-16 prose-h2:mb-8 prose-h2:leading-tight
+          prose-h3:text-[24px] prose-h3:mt-12 prose-h3:mb-6 prose-h3:leading-snug
+          prose-h4:text-[20px] prose-h4:mt-8 prose-h4:mb-4 prose-h4:text-[var(--primary-teal)]
+          prose-p:text-[18px] prose-p:text-gray-800 prose-p:leading-[1.8] prose-p:mb-8
+          prose-a:text-[var(--primary-teal)] prose-a:font-semibold prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-[var(--accent-orange)]
+          prose-strong:font-bold prose-strong:text-[#1C355E]
+          prose-ul:my-8 prose-ul:space-y-3 prose-ul:pl-0
+          prose-ol:my-8 prose-ol:space-y-3 prose-ol:pl-0
+          prose-li:text-[18px] prose-li:text-gray-800 prose-li:leading-[1.8] prose-li:ml-6 prose-li:pl-2
+          prose-li:marker:text-[var(--accent-orange)]
+          prose-blockquote:border-l-4 prose-blockquote:border-[var(--accent-orange)] prose-blockquote:pl-8 prose-blockquote:pr-4 prose-blockquote:py-4 prose-blockquote:italic prose-blockquote:text-[20px] prose-blockquote:text-gray-700 prose-blockquote:my-12 prose-blockquote:bg-gray-50 prose-blockquote:rounded-r-lg
+          prose-code:text-[var(--primary-teal)] prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-[16px] prose-code:font-mono
+          prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:my-10
         ">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {post.content}
           </ReactMarkdown>
         </div>
 
-        {/* Tags */}
-        {post.tags && post.tags.length > 0 && (
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded hover:bg-gray-200 transition-colors"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* CTA Section */}
         <div className="mt-16 p-8 bg-gradient-to-r from-[#1C355E] to-[#2A4A7F] rounded-lg text-white">

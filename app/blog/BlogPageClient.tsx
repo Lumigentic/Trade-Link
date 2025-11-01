@@ -95,23 +95,32 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
 
                 {/* Content Section */}
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-1 px-4 py-2 bg-gradient-to-r from-[var(--accent-orange)]/10 to-[var(--accent-orange)]/5 text-[var(--accent-orange)] text-sm font-bold rounded-full border border-[var(--accent-orange)]/20">
-                      {post.category}
-                    </span>
-                    <div className="flex items-center text-sm text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg">
-                      <Calendar className="w-4 h-4 mr-1.5 text-[var(--primary-teal)]" />
-                      {new Date(post.date).toLocaleDateString('en-GB')}
+                  <Link href={`/blog/${post.slug}`}>
+                    <h2 className="font-heading text-xl font-bold text-[#1C355E] mb-4 group-hover:text-[var(--primary-teal)] transition-colors duration-300 cursor-pointer">
+                      {post.title}
+                    </h2>
+                  </Link>
+
+                  {/* Category Tags */}
+                  {post.tags && post.tags.length > 0 && (
+                    <div className="mb-4">
+                      <div className="flex flex-wrap gap-2">
+                        {post.tags.map((tag, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1.5 bg-[var(--accent-orange)] text-white text-xs font-bold uppercase tracking-wide rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
+                  )}
+
+                  <div className="flex items-center text-sm text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg mb-6 w-fit">
+                    <Calendar className="w-4 h-4 mr-1.5 text-[var(--primary-teal)]" />
+                    {new Date(post.date).toLocaleDateString('en-GB')}
                   </div>
-
-                  <h2 className="font-heading text-xl font-bold text-gray-900 mb-3 group-hover:text-[var(--primary-teal)] transition-colors duration-300 line-clamp-2">
-                    {post.title}
-                  </h2>
-
-                  <p className="text-gray-600 mb-5 leading-relaxed line-clamp-3">
-                    {post.excerpt}
-                  </p>
 
                   <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                     <Button href={`/blog/${post.slug}`} variant="outline" size="sm">
