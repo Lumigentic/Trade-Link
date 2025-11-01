@@ -74,9 +74,9 @@ export default function CertificationsCarousel() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
       {/* Carousel Container */}
-      <div className="relative h-64 sm:h-80 md:h-96 bg-white rounded-2xl shadow-card-premium overflow-hidden">
+      <div className="relative h-48 sm:h-56 md:h-64 bg-white rounded-2xl shadow-card-premium overflow-hidden">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -103,12 +103,13 @@ export default function CertificationsCarousel() {
             }}
             className="absolute inset-0 flex items-center justify-center p-8"
           >
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-full max-w-md h-full flex items-center justify-center">
               <Image
                 src={certifications[currentIndex].image}
                 alt={certifications[currentIndex].name}
-                fill
-                className="object-contain"
+                width={400}
+                height={300}
+                className="object-contain max-h-full"
                 priority
               />
             </div>
