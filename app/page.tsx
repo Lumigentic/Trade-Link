@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Button from '@/components/Button';
+import CertificationsCarousel from '@/components/CertificationsCarousel';
 import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -440,6 +441,35 @@ export default function HomePage() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Certifications Carousel Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Certifications & <span className="text-[var(--accent-orange)]">Memberships</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Trusted industry accreditations ensuring the highest standards in international trade and logistics
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <CertificationsCarousel />
+          </motion.div>
         </div>
       </section>
 
