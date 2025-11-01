@@ -76,7 +76,7 @@ export default function CertificationsCarousel() {
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Carousel Container */}
-      <div className="relative h-48 sm:h-56 md:h-64 bg-white rounded-2xl shadow-card-premium overflow-hidden">
+      <div className="relative h-48 sm:h-56 md:h-64 bg-white rounded-lg shadow-card-premium overflow-hidden">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -119,14 +119,14 @@ export default function CertificationsCarousel() {
         {/* Navigation Arrows */}
         <button
           onClick={() => paginate(-1)}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 hover:bg-white rounded shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
           aria-label="Previous certification"
         >
           <ChevronLeft className="w-6 h-6 text-[var(--primary-teal)]" />
         </button>
         <button
           onClick={() => paginate(1)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 hover:bg-white rounded shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
           aria-label="Next certification"
         >
           <ChevronRight className="w-6 h-6 text-[var(--primary-teal)]" />

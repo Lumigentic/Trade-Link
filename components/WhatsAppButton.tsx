@@ -53,7 +53,7 @@ export default function WhatsAppButton() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.3 }}
-                className="relative bg-white rounded-2xl shadow-card-premium-hover p-4 max-w-xs border border-gray-100"
+                className="relative bg-white rounded-lg shadow-card-premium-hover p-4 max-w-xs border border-gray-100"
               >
                 <button
                   onClick={() => setShowTooltip(false)}

@@ -102,7 +102,7 @@ export default function AnimatedRouteMap() {
 
   if (!mounted) {
     return (
-      <div className="relative w-full h-[500px] md:h-[600px] bg-gradient-to-br from-[#1C355E]/5 to-[#0EA5E9]/5 rounded-3xl overflow-hidden shadow-card-premium flex items-center justify-center">
+      <div className="relative w-full h-[500px] md:h-[600px] bg-gradient-to-br from-[#1C355E]/5 to-[#0EA5E9]/5 rounded-lg overflow-hidden shadow-card-premium flex items-center justify-center">
         <p className="text-gray-500">Loading map...</p>
       </div>
     );
@@ -145,7 +145,7 @@ export default function AnimatedRouteMap() {
   };
 
   return (
-    <div className="relative w-full h-[500px] md:h-[600px] bg-gradient-to-br from-[#1C355E]/5 to-[#0EA5E9]/5 rounded-3xl overflow-hidden shadow-card-premium">
+    <div className="relative w-full h-[500px] md:h-[600px] bg-gradient-to-br from-[#1C355E]/5 to-[#0EA5E9]/5 rounded-lg overflow-hidden shadow-card-premium">
       <style jsx global>{`
         .leaflet-container {
           height: 100%;

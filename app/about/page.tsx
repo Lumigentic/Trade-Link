@@ -55,22 +55,22 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-2 gap-4"
             >
-              <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-6 rounded-2xl text-white">
+              <div className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-6 rounded-lg text-white">
                 <Award className="w-10 h-10 mb-3" />
                 <h3 className="font-heading text-2xl font-bold mb-1">BIFA</h3>
                 <p className="text-sm text-gray-100">Certified Member</p>
               </div>
-              <div className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-6 rounded-2xl text-white mt-8">
+              <div className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-6 rounded-lg text-white mt-8">
                 <Globe className="w-10 h-10 mb-3" />
                 <h3 className="font-heading text-2xl font-bold mb-1">50+</h3>
                 <p className="text-sm text-gray-100">Countries</p>
               </div>
-              <div className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-6 rounded-2xl text-white">
+              <div className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-6 rounded-lg text-white">
                 <Users className="w-10 h-10 mb-3" />
                 <h3 className="font-heading text-2xl font-bold mb-1">Expert</h3>
                 <p className="text-sm text-gray-100">Team</p>
               </div>
-              <div className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-6 rounded-2xl text-white mt-8">
+              <div className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-6 rounded-lg text-white mt-8">
                 <Target className="w-10 h-10 mb-3" />
                 <h3 className="font-heading text-2xl font-bold mb-1">100%</h3>
                 <p className="text-sm text-gray-100">Satisfaction</p>
@@ -84,19 +84,19 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-4xl font-bold text-gray-900 mb-12">Our Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-4">Expertise</h3>
               <p className="text-gray-600">
                 Years of experience in international trade, customs and logistics
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-4">Reliability</h3>
               <p className="text-gray-600">
                 Dependable service you can count on, every time
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-4">Personal Service</h3>
               <p className="text-gray-600">
                 Tailored solutions designed specifically for your business
@@ -129,7 +129,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-8 rounded-2xl text-white hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--blue-gradient-end)] p-8 rounded-lg text-white hover:shadow-xl transition-shadow"
             >
               <Package className="w-12 h-12 mb-4" />
               <h3 className="font-heading text-2xl font-bold mb-3">E-commerce & Retail</h3>
@@ -143,7 +143,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-8 rounded-2xl text-white hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-[var(--accent-orange)] to-[var(--accent-orange-dark)] p-8 rounded-lg text-white hover:shadow-xl transition-shadow"
             >
               <Factory className="w-12 h-12 mb-4" />
               <h3 className="font-heading text-2xl font-bold mb-3">Manufacturing</h3>
@@ -157,7 +157,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-8 rounded-2xl text-white hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-[var(--blue-gradient-start)] to-[var(--primary-teal)] p-8 rounded-lg text-white hover:shadow-xl transition-shadow"
             >
               <ShoppingBag className="w-12 h-12 mb-4" />
               <h3 className="font-heading text-2xl font-bold mb-3">Consumer Goods</h3>
@@ -171,7 +171,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-8 rounded-2xl text-white hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-[var(--primary-teal-dark)] to-[var(--blue-gradient-end)] p-8 rounded-lg text-white hover:shadow-xl transition-shadow"
             >
               <Shirt className="w-12 h-12 mb-4" />
               <h3 className="font-heading text-2xl font-bold mb-3">Fashion & Textiles</h3>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-gradient-to-br from-[var(--accent-orange-dark)] to-[var(--accent-orange)] p-8 rounded-2xl text-white hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-[var(--accent-orange-dark)] to-[var(--accent-orange)] p-8 rounded-lg text-white hover:shadow-xl transition-shadow"
             >
               <Zap className="w-12 h-12 mb-4" />
               <h3 className="font-heading text-2xl font-bold mb-3">Electronics & Technology</h3>
@@ -199,7 +199,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--primary-teal-dark)] p-8 rounded-2xl text-white hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-[var(--primary-teal)] to-[var(--primary-teal-dark)] p-8 rounded-lg text-white hover:shadow-xl transition-shadow"
             >
               <Truck className="w-12 h-12 mb-4" />
               <h3 className="font-heading text-2xl font-bold mb-3">Industrial Equipment</h3>
