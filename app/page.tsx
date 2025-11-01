@@ -88,89 +88,127 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--blue-gradient-start)] via-[var(--blue-gradient-mid)] to-[var(--blue-gradient-end)] text-white overflow-hidden gradient-animated">
-        {/* Particle Network Background */}
-        <ParticleBackground />
-
-        {/* Animated Gradient Mesh Background with Parallax */}
-        <motion.div
-          className="absolute inset-0 opacity-20 z-[2]"
-          style={{ y: y1 }}
-        >
-          <div className="absolute top-20 -left-10 w-96 h-96 bg-[var(--accent-purple)]/30 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
-          <div className="absolute top-0 -right-10 w-96 h-96 bg-[var(--accent-orange)]/40 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-1/3 w-96 h-96 bg-[var(--accent-pink)]/30 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
-        </motion.div>
-
-        {/* Grid Pattern Overlay with Parallax */}
-        <motion.div
-          className="absolute inset-0 bg-grid-pattern opacity-5 z-[3]"
-          style={{ y: y2 }}
+      <section className="relative min-h-screen flex items-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ backgroundImage: 'url(/images/hero-logistics.webp)' }}
         />
 
-        {/* Radial Gradient Spotlight */}
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/30 z-[3]"></div>
+        {/* Navy Blue Overlay - darker for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1C355E]/95 via-[#1C355E]/90 to-[#1C355E]/75 z-[1]"></div>
 
+        {/* Content */}
         <motion.div
-          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center z-10"
-          style={{ opacity }}
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40 z-10 w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          {/* Hero Content */}
+          {/* Hero Content - Left Aligned */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl text-left"
           >
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {t.hero.title}
-              <br className="hidden sm:block" />
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            >
+              Connecting Markets.
+              <br />
               <span className="text-[var(--accent-orange)]">
-                {t.hero.titleHighlight}
+                Moving Opportunities.
               </span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
-              {t.hero.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl font-light"
+            >
+              Trade Link helps businesses expand, connect, and move goods seamlessly between Spain, Poland, and the United Kingdom - from research and market entry to transport and customs clearance.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
               <Button href="/contact" variant="secondary" size="lg">
-                {t.hero.cta} <ArrowRight className="ml-2 w-5 h-5" />
+                Get Started <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-            </div>
+              <Button href="/services" variant="outline" size="lg">
+                Our Services
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+          <div className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center">
+            <motion.div
+              className="w-1 h-3 bg-white rounded-full mt-2"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            ></motion.div>
           </div>
         </motion.div>
       </section>
 
-      {/* Intro/About Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Empowering Cross-Border Growth
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-4">
-              At Trade Link, we're more than just a logistics or consulting firm - we're your bridge to international success. With deep expertise in the Spanish, Polish, and UK markets, we help companies enter new territories, find trusted partners, and deliver goods with zero hassle.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Whether you're a manufacturer, importer, or distributor, Trade Link is your single point of contact for research, connections, and compliant transport solutions that drive growth.
-            </p>
-          </motion.div>
+      {/* Quick Stats Bar */}
+      <section className="bg-[#1C355E] py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-[var(--accent-orange)] mb-2">20+</div>
+              <div className="text-white/90 text-sm md:text-base font-medium">Years Experience</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-[var(--accent-orange)] mb-2">3</div>
+              <div className="text-white/90 text-sm md:text-base font-medium">Countries Connected</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-[var(--accent-orange)] mb-2">1000+</div>
+              <div className="text-white/90 text-sm md:text-base font-medium">Shipments Delivered</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-[var(--accent-orange)] mb-2">24/7</div>
+              <div className="text-white/90 text-sm md:text-base font-medium">Support Available</div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
