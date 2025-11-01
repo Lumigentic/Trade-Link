@@ -3,6 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
+import AnimatedRouteMap from '@/components/AnimatedRouteMap';
+import FloatingElements from '@/components/FloatingElements';
 import { Award, Users, Globe, Target, ArrowRight, Package, Factory, ShoppingBag, Shirt, Zap, Truck } from 'lucide-react';
 
 export default function AboutPage() {
@@ -206,6 +208,60 @@ export default function AboutPage() {
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Animated Route Map Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Floating Elements Background */}
+        <FloatingElements />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Connecting Three Major Markets
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Our transport network seamlessly links the United Kingdom, Poland, and Spain with multimodal logistics solutions
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <AnimatedRouteMap />
+          </motion.div>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 max-w-4xl mx-auto"
+          >
+            <div className="text-center p-4 bg-white rounded-xl shadow-md">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-2">24/7</div>
+              <div className="text-xs sm:text-sm text-gray-600">Tracking</div>
+            </div>
+            <div className="text-center p-4 bg-white rounded-xl shadow-md">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--accent-orange)] mb-2">3</div>
+              <div className="text-xs sm:text-sm text-gray-600">Countries</div>
+            </div>
+            <div className="text-center p-4 bg-white rounded-xl shadow-md">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-2">48h</div>
+              <div className="text-xs sm:text-sm text-gray-600">Avg Transit</div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

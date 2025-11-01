@@ -2,9 +2,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Button from '@/components/Button';
-import ParticleBackground from '@/components/ParticleBackground';
-import AnimatedRouteMap from '@/components/AnimatedRouteMap';
-import FloatingElements from '@/components/FloatingElements';
 import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -209,60 +206,6 @@ export default function HomePage() {
               <div className="text-white/90 text-sm md:text-base font-medium">Support Available</div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Animated Route Map Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-        {/* Floating Elements Background */}
-        <FloatingElements />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Connecting Three Major Markets
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Our transport network seamlessly links the United Kingdom, Poland, and Spain with multimodal logistics solutions
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <AnimatedRouteMap />
-          </motion.div>
-
-          {/* Stats Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 max-w-4xl mx-auto"
-          >
-            <div className="text-center p-4 bg-white rounded-xl shadow-md">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-2">24/7</div>
-              <div className="text-xs sm:text-sm text-gray-600">Tracking</div>
-            </div>
-            <div className="text-center p-4 bg-white rounded-xl shadow-md">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--accent-orange)] mb-2">3</div>
-              <div className="text-xs sm:text-sm text-gray-600">Countries</div>
-            </div>
-            <div className="text-center p-4 bg-white rounded-xl shadow-md">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-2">48h</div>
-              <div className="text-xs sm:text-sm text-gray-600">Avg Transit</div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -594,17 +537,14 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="relative py-32 overflow-hidden">
-        {/* Premium Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--blue-gradient-start)] via-[var(--primary-teal)] to-[var(--accent-orange)] gradient-animated"></div>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ backgroundImage: 'url(/images/cta-logistics.jpg)' }}
+        />
 
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[var(--accent-purple)]/30 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-[var(--accent-pink)]/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-        </div>
-
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        {/* Navy Blue Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1C355E]/95 via-[#1C355E]/90 to-[#1C355E]/85 z-[1]"></div>
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div
@@ -634,11 +574,11 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg"
+              className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg"
             >
               Ready to expand your
               <br />
-              <span className="text-[var(--accent-orange-light)]">
+              <span className="text-[var(--accent-orange)]">
                 business across Europe?
               </span>
             </motion.h2>
@@ -694,12 +634,6 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        {/* Bottom Wave Decoration */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white" fillOpacity="1"/>
-          </svg>
-        </div>
       </section>
     </div>
   );
