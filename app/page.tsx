@@ -5,7 +5,6 @@ import Button from '@/components/Button';
 import ParticleBackground from '@/components/ParticleBackground';
 import AnimatedRouteMap from '@/components/AnimatedRouteMap';
 import FloatingElements from '@/components/FloatingElements';
-import WorldMap from '@/components/WorldMap';
 import { Ship, Package, Globe, CheckCircle, ArrowRight, Award, Shield, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -92,11 +91,6 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--blue-gradient-start)] via-[var(--blue-gradient-mid)] to-[var(--blue-gradient-end)] text-white overflow-hidden gradient-animated">
         {/* Particle Network Background */}
         <ParticleBackground />
-
-        {/* World Map Background */}
-        <div className="absolute inset-0 opacity-15 z-[1]">
-          <WorldMap highlightCountries={true} />
-        </div>
 
         {/* Animated Gradient Mesh Background with Parallax */}
         <motion.div
@@ -337,11 +331,6 @@ export default function HomePage() {
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-        {/* World Map Background */}
-        <div className="absolute inset-0 opacity-30">
-          <WorldMap highlightCountries={true} />
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
