@@ -29,18 +29,7 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-block mb-6"
-            >
-              <span className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-[var(--accent-orange)] font-bold text-sm">
-                📚 Knowledge Hub
-              </span>
-            </motion.div>
-
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg">
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg mt-6">
               Blog & <span className="text-[var(--accent-orange)]">Insights</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed">
