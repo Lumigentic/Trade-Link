@@ -82,11 +82,8 @@ export default function AnimatedRouteMap() {
   useEffect(() => {
     setMounted(true);
 
-    // Import Leaflet CSS and create custom icons
-    Promise.all([
-      import('leaflet/dist/leaflet.css'),
-      import('leaflet')
-    ]).then(([_, L]) => {
+    // Import Leaflet and create custom icons
+    import('leaflet').then((L) => {
       // Fix default icon issue in webpack/next.js
       delete (L.Icon.Default.prototype as any)._getIconUrl;
       L.Icon.Default.mergeOptions({

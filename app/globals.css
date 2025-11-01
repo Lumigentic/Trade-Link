@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 /* Trade Link Color Scheme - Updated 2025 */
 :root {
